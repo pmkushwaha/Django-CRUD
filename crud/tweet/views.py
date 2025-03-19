@@ -19,8 +19,9 @@ def tweet_create(request):
         form=tweetForm(request.POST, request.FILES)
         if form .is_valid():
             tweet=form.save(commit=False)  #"commit=False is use to not save data in DB for certain time"
-            tweet.user=request.user
-            return redirect("Tweet_list")
+            tweet.User=request.user
+            tweet.save()
+            return redirect("tweet_list")
     # if empty form         
     else:
         form=tweetForm()
