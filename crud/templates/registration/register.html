@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}
+Django CRUD
+{% endblock  %}
+
+{% block content %}
+<form method ="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-primary">Registration</button>
+</form>
+<p> You have an Account? <a href="{% url 'login' %}">Login Here</a></p>
+{% endblock %}
