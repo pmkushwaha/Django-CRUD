@@ -126,9 +126,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # for the dynamic photos
-MEDAI_url='/media/'
+MEDAI_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 # for static files like css,js,html
 STATIC_URL='static/'
-STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]   #.8 then we add static usl in url.py
+STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]   #.8 then we add static usl in url.py\
+
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/tweet'
+LOGOUT_REDIRECT_URL = '/tweet'
